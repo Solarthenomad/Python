@@ -27,7 +27,7 @@ print(a*100)
 print(a+b)
 /*python is fun! 이 출력되게 됨*/
 
-
+#문자열 처리 해주기 
 #인덱싱(문자열 순서대로 출력하자.)
 a="Life is too short, you need python"
 print(a[0])   /*L이 출력됨. a[0]은 맨 첫번째 문자열이다.*/
@@ -64,10 +64,21 @@ a=f"나의 이름은 {name}입니다."
 print(a)
 a.lower() #모두 소문자로 바꾸기
 a.upper() #모두 대문자로 바꾸기 
+print(a[0].islower())
+#islower, isupper은 이게 과연 대문자인지 소문자인지 true or false로 답변이 되는 것 
+print(len(a)) #길이를 출력해주기 
+print(a.replace("My age", "My sister")) #My age를 My sister로 바꿔줌 
+index = a.index("n")
+#n이 a에서 어느 위치에 있는지 확인이 가능함
+index = a.index("n", index+1)
+print(index)
+
+
+
 #양쪽 공백지우기
 a.strip()
-#문자열 바꾸기 
-a.replace("My age", "Your age") #My age를 Your age로 바꿔주는 것
+
+
 
 #%d : 정수 %f : 실수 %s : 문자열(다 사용가능) 이 세개만 사용되니까 이 세개만 외워놓자
 
@@ -83,7 +94,9 @@ print(d)
 #유용한 명령어들 : count,find, join
 a="hobby"
 print(a.count('b')) /*.은 ~의라는 뜻으로 'a의 b개수를 세라라는 의미임'*/
-print(a.find('b'))/**/
+print(a.find('b'))/*처음으로 발견된 b의 인덱스 */
+find = print(a.find('b'))
+find = a.find("b", find+1)/*b의 인덱스 이후 다음 발견된 이후 처음 발견된 b의 인덱스 */
 
 a=",".join("abcd")
 print(a)

@@ -52,7 +52,7 @@ print(a)
 class FourCal:
     def __init__(self,first, second):
         self.first = first 
-        self.second = first 
+        self.second = second
         #변수 초기값을 class에서 설정해준다. 
         
     def setdata(self, first, second): #setdata 인자 즉 객체 
